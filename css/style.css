@@ -4,6 +4,7 @@ body {
   color: #252B42;
   font-size: 14px;
   font-weight: 500;
+  height: 100%;
 }
 
 /* ======================================================================== */
@@ -21,6 +22,14 @@ body {
   margin: 0 auto;
 }
 
+/* ┏ для примера ┓ */
+.wrapper {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* min-height: 100%; */
+}
+/* ┗ для примера ┛ */
+
 /* ======================================================================== */
 
 .header {
@@ -36,6 +45,14 @@ body {
   align-items: center;
   min-height: 104px;
 }
+
+/* ┏ адаптив ┓ */
+@media (max-width: 479px) {
+  .header__container {
+    min-height: 70px;
+  }
+}
+/* ┗ адаптив ┛ */
 
 .header__logo {
   font-size: 24px;
@@ -110,3 +127,123 @@ body {
   }
 }
 /* ┗ адаптив ┛ */
+
+/* ======================================================================== */
+
+/* ┏ для примера ┓ */
+.main {
+  /* flex: 1 0 auto; */
+}
+/* ┗ для примера ┛ */
+
+.banner {
+  background-image: url(../img/banner.jpg); /* Местоположение фоновой картинки */
+  background-position: center center; /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
+  background-repeat: no-repeat; /* Фон не повторяется */
+
+  /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
+  /* background-attachment: fixed;  */
+
+  background-size: cover; /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
+  background-color: #464646; /* Цвет фона, который будет отображаться при загрузке фоновой картинки*/
+
+  /* Краткая запись */
+  /* background: url(../img/banner.png) center center cover no-repeat fixed; */
+
+  padding-top: 104px;
+}
+
+/* ┏ адаптив ┓ */
+@media (max-width: 768px) {
+  .banner  {
+    background-position: right; 
+  }
+}
+/* ┗ адаптив ┛ */
+
+.banner .banner-content {
+  padding: 80px 0 191px;
+  max-width: 509px; /* Позже изменить 509 на 400 */
+}
+
+/* ┏ адаптив ┓ */
+@media (max-width: 992px) {
+  .banner .banner-content  {
+    padding-top: 0;
+  }
+}
+/* ┗ адаптив ┛ */
+
+/* ┏ для примера ┓ */
+.banner-content > *:not(:last-child) {
+  /* margin-bottom: 35px; */
+}
+/* ┗ для примера ┛ */
+
+.banner .title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+}
+
+/* ┏ адаптив ┓ */
+@media (max-width: 992px) {
+  .banner .title  {
+    font-size: 42px;
+    line-height: 40px;
+  }
+}
+/* ┗ адаптив ┛ */
+
+.banner .subtitle {
+  margin: 0;
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.banner .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.banner .buttons button {
+  padding: 10px 36px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: inherit;
+  background-color: #FF7B47;
+  border-radius: 37px;
+  color: #FFFFFF;
+  cursor: pointer; /* отображаем курсор в виде руки при наведении */
+}
+
+.banner .buttons button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.banner .buttons .button-green {
+  background-color: transparent;
+  border: 1px solid #0D5C63;
+  color: #0D5C63;
+}
+
+/* ======================================================================== */
+
+.footer {
+  height: 74px;
+  /* ┏ для примера ┓ */
+    /* flex: 0 0 auto; */
+  /* ┗ для примера ┛ */
+}
