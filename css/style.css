@@ -133,6 +133,7 @@ body {
 /* ┏ для примера ┓ */
 .main {
   /* flex: 1 0 auto; */
+  background-color: #FAFAFA;
 }
 /* ┗ для примера ┛ */
 
@@ -213,6 +214,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
+  flex-wrap: wrap;
 }
 
 .banner .buttons button {
@@ -233,10 +235,196 @@ body {
   margin-right: 10px;
 }
 
+/* ┏ адаптив ┓ */
+@media (max-width: 479px) {
+  .banner .buttons button  {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+  
+  .banner .buttons button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* ┗ адаптив ┛ */
+
 .banner .buttons .button-green {
   background-color: transparent;
   border: 1px solid #0D5C63;
   color: #0D5C63;
+}
+
+/* ======================================================================== */
+
+.features {
+  margin-top: -111px;
+}
+
+.features-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features-item {
+  background-color: #ffffff;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  padding: 35px 40px;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-item > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.features-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252B42;
+}
+
+.features-description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.features-green {
+  background-color: #0D5C63;
+}
+
+.features-green .features-title,
+.features-green .features-description {
+  color: #ffffff;
+}
+
+/* ======================================================================== */
+
+.section-title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+/* ======================================================================== */
+
+.achievements {
+  padding: 80px 0;
+}
+
+.achievements-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievements-item {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  flex: 0 1 240px;
+}
+
+.achievements-item > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.achievements-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.achievements-title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+}
+
+.achievements-description {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #737373;
+}
+
+/* ======================================================================== */
+
+.practice {
+  padding: 80px 0;
+}
+
+.practice-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.practice-item {
+  background-color: #ffffff;
+  flex: 0 1 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.practice-item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.practice-item-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.practice-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #252B42;
+  margin-bottom: 15px;
+}
+
+.practice-description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.practice-picture {
+  width: 100%;
+  max-width: 240px;
 }
 
 /* ======================================================================== */
