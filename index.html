@@ -1,225 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relvise</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/normilize.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="header__container container">
-        <a href="#" class="header__logo">
-          Relvise
-        </a>
-        <nav class="header__menu menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a href="#" class="menu__link">
-                Home
-              </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">
-                Product
-              </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">
-                Pricing
-              </a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="#" class="header__logo">Relvise</a>
+
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Product</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Pricing</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+  </header>
+  <main>
+    <section class="banner">
+      <div class="wrapper">
+        <div class="banner__wrapper">
+          <h1 class="banner__title">Finance and Consultancy Solution
+          </h1>
+          <p class="banner__subtitle">
+            We know how large objects will act,<br>
+            but things on a small scale.
+          </p>
+          <div class="banner__buttons">
+            <button class="banner__btn banner__btn--orange">
+              Get Quote Now
+            </button>
+            <button class="banner__btn banner__btn--green">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
-    </header>
-  
-    <main class="main">
-      <section class="banner">
-        <div class="container">
-          <div class="banner-content">
-            <h1 class="title">
-              Finance and Consultancy Solution
-            </h1>
-            <h4 class="subtitle">
-              We know how large objects will act, but things on a small scale.
-            </h4>
-            <div class="buttons">
-              <button class="button">Get Quote Now</button>
-              <button class="button button-green">Learn More</button>
-            </div>
-          </div>
-        </div>
-      </section>
+    </section>
 
-      <section class="features container">
-        <div class="features-wrapper">
-          <article class="features-item">
-            <div class="features-icon">
-              <img src="img/box.png" alt="Features icon">
-            </div>
-            <div class="features-title">
-              Environmental Consulting
-            </div>
-            <div class="features-description">
-              We focus on ergonomics and meeting you where you work. 
-            </div>
-          </article>
-          <article class="features-item">
-            <div class="features-icon">
-              <img src="img/shop.png" alt="Features icon">
-            </div>
-            <div class="features-title">
-              Finance and consultancy 
-            </div>
-            <div class="features-description">
-              Just type what's on your mind and we'll get you there.
-            </div>
-          </article>
-          <article class="features-item features-green">
-            <div class="features-icon">
-              <img src="img/notebook.png" alt="Features icon">
-            </div>
-            <div class="features-title">
-              Financial Services Consulting
-            </div>
-            <div class="features-description">
-              the quick fox jumps over the lazy dog
-            </div>
-          </article>
-        </div>
-      </section>
+    <section class="features wrapper">
+      <!-- <div class="wrapper"> -->
+      <article class="features__card">
+        <img class="features__img" src="image/features-card-1.png" alt="Card image">
+        <h3 class="features__title">Environmental Consulting</h3>
+        <p class="features__text">We focus on ergonomics and meeting you where you work.</p>
+      </article>
+      <article class="features__card">
+        <img class="features__img" src="image/features-card-2.png" alt="Card image">
+        <h3 class="features__title">Finance and consultancy </h3>
+        <p class="features__text">Just type what's on your mind and we'll get you there.</p>
+      </article>
+      <article class="features__card features__card--green">
+        <img class="features__img" src="image/features-card-3.png" alt="Card image">
+        <h3 class="features__title">Financial Services Consulting</h3>
+        <p class="features__text">the quick fox jumps over the lazy dog</p>
+      </article>
+      <!-- </div> -->
+    </section>
 
-      <section class="achievements">
-        <div class="container">
-          <div class="section-title">
-            Designing Better Experience
-          </div>
-          <p class="section-description">
-            Problems trying to resolve the conflict between the two major realms <br>
-            of Classical physics: Newtonian mechanics 
-          </p>
-          <div class="achievements-wrapper">
-            <article class="achievements-item">
-              <div class="achievements-icon">
-                <img src="img/users.png" alt="Achievements icon">
-              </div>
-              <div class="achievements-title">
-                972 +
-              </div>
-              <div class="achievements-description">
-                Consumer Products 
-              </div>
-            </article>
-            <article class="achievements-item">
-              <div class="achievements-icon">
-                <img src="img/stats.png" alt="Achievements icon">
-              </div>
-              <div class="achievements-title">
-                181 +
-              </div>
-              <div class="achievements-description">
-                Financial Services 
-              </div>
-            </article>
-            <article class="achievements-item">
-              <div class="achievements-icon">
-                <img src="img/award.png" alt="Achievements icon">
-              </div>
-              <div class="achievements-title">
-                98%
-              </div>
-              <div class="achievements-description">
-                Environmental 
-              </div>
-            </article>
-            <article class="achievements-item">
-              <div class="achievements-icon">
-                <img src="img/box.png" alt="Achievements icon">
-              </div>
-              <div class="achievements-title">
-                746 +
-              </div>
-              <div class="achievements-description">
-                Business & Finance 
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section class="achievements wrapper">
+      <h2 class="section-title">
+        Designing Better Experience
+      </h2>
+      <p class="section-desc">
+        Problems trying to resolve the conflict between the two major realms<br> of Classical physics: Newtonian
+        mechanics
+      </p>
+      <div class="achievements__items">
+        <article class="achievements__card">
+          <img class="achievements__icon" src="image/achievements-card-1.png" alt="achievements icon">
+          <h3 class="achievements__title">972 +</h3>
+          <p class="achievements__text">Consumer Products</p>
+        </article>
 
-      <section class="practice">
-        <div class="container">
-          <div class="section-title">
-            Practice Advice
+        <article class="achievements__card">
+          <img class="achievements__icon" src="image/achievements-card-2.png" alt="achievements icon">
+          <h3 class="achievements__title">181 +</h3>
+          <p class="achievements__text">Financi al Services s</p>
+        </article>
+
+        <article class="achievements__card">
+          <img class="achievements__icon" src="image/achievements-card-3.png" alt="achievements icon">
+          <h3 class="achievements__title">98%</h3>
+          <p class="achievements__text">Environmental</p>
+        </article>
+
+        <article class="achievements__card">
+          <img class="achievements__icon" src="image/achievements-card-4.png" alt="achievements icon">
+          <h3 class="achievements__title">746 +</h3>
+          <p class="achievements__text">Business & Finance</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="practice wrapper">
+      <h2 class="section-title">
+        Practice Advice
+      </h2>
+      <p class="section-desc">
+        Problems trying to resolve the conflict between<br>
+        the two major realms of Classical physics: Newtonian mechanics
+      </p>
+      <div class="practice__items">
+        <article class="practice__card">
+          <div class="practice__wrapper">
+            <h3 class="practice__title">A single source of truth</h3>
+            <p class="practice__text">Newton thought that light was made up of particles, but then it was discovered</p>
           </div>
-          <p class="section-description">
-            Problems trying to resolve the conflict between <br>
-            the two major realms of Classical physics: Newtonian mechanics 
-          </p>
-          <div class="practice-wrapper">
-            <div class="practice-item">
-              <div class="practice-item-container">
-                <div class="practice-title">
-                  A single source of truth
-                </div>
-                <div class="practice-description">
-                  Newton thought that light was made up of particles, but then it was discovered 
-                </div>
+
+          <img class="practice__icon" src="image/practice-card-1.jpg" alt="practice image">
+        </article>
+
+        <article class="practice__card">
+          <div class="practice__wrapper">
+            <h3 class="practice__title">Fastest way to organize</h3>
+            <p class="practice__text">“Quantum mechanics” is the description of the behaviour of matter</p>
+          </div>
+
+          <img class="practice__icon" src="image/practice-card-2.jpg" alt="practice image">
+        </article>
+
+        <article class="practice__card">
+          <div class="practice__wrapper">
+            <h3 class="practice__title">Fastest way to organize</h3>
+            <p class="practice__text">They describe a universe consisting of bodies moving</p>
+          </div>
+
+          <img class="practice__icon" src="image/practice-card-3.jpg" alt="practice image">
+        </article>
+
+        <article class="practice__card">
+          <div class="practice__wrapper">
+            <h3 class="practice__title">Work better together</h3>
+            <p class="practice__text">They finally obtained a consistent description of the behaviour </p>
+          </div>
+
+          <img class="practice__icon" src="image/practice-card-4.jpg" alt="practice image">
+        </article>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="wrapper">
+        <h2 class="section-title">
+          Who We Are
+        </h2>
+        <p class="section-desc">
+          Problems trying to resolve the conflict between<br>
+          the two major realms of Classical physics: Newtonian mechanics
+        </p>
+
+        <div class="about__wrapper">
+          <!-- <img class="about__img" src="image/poster.jpg" alt=""> -->
+
+          <video class="about__video" src="video.mp4" loop controls poster="image/poster.jpg"></video>
+
+          <div class="about__content">
+            <h3 class="about__title">Most trusted in our field</h3>
+            <p class="about__desc">Most calendars are designed for teams. Slate is designed for freelancers who want a
+              simple way to plan their schedule.</p>
+
+            <div class="about__item">
+              <img class="about__icon" src="image/about-icon-1.png" alt="about icon">
+
+              <div class="about__item-text">
+                <h4 class="about__item-title">the quick fox jumps over the lazy dog</h4>
+                <p class="about__item-desc">Things on a very small scale ...</p>
               </div>
-              <img class="practice-picture" src="img/practice-1.png" alt="Practice picture">
             </div>
-            <div class="practice-item">
-              <div class="practice-item-container">
-                <div class="practice-title">
-                  Fastest way to organize
-                </div>
-                <div class="practice-description">
-                  “Quantum mechanics” is the description of the behaviour of matter 
-                </div>
+
+            <div class="about__item">
+              <img class="about__icon" src="image/about-icon-2.png" alt="about icon">
+
+              <div class="about__item-text">
+                <h4 class="about__item-title">the quick fox jumps over the lazy dog</h4>
+                <p class="about__item-desc">Things on a very small scale ...</p>
               </div>
-              <img class="practice-picture" src="img/practice-2.png" alt="Practice picture">
-            </div>
-            <div class="practice-item">
-              <div class="practice-item-container">
-                <div class="practice-title">
-                  Fastest way to take action
-                </div>
-                <div class="practice-description">
-                  They describe a universe consisting of bodies moving
-                </div>
-              </div>
-              <img class="practice-picture" src="img/practice-3.png" alt="Practice picture">
-            </div>
-            <div class="practice-item">
-              <div class="practice-item-container">
-                <div class="practice-title">
-                  Work better together
-                </div>
-                <div class="practice-description">
-                  They finally obtained a consistent description of the behaviour 
-                </div>
-              </div>
-              <img class="practice-picture" src="img/practice-4.png" alt="Practice picture">
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      123
-    </footer>
-  </div>
+      </div>
+    </section>
+
+    <section class="partners">
+      <div class="wrapper">
+        <div class="partners__wrapper">
+          <img class="partners__img" src="image/partners-1.png" alt="">
+          <img class="partners__img" src="image/partners-2.png" alt="">
+          <img class="partners__img" src="image/partners-3.png" alt="">
+          <img class="partners__img" src="image/partners-4.png" alt="">
+          <img class="partners__img" src="image/partners-5.png" alt="">
+          <img class="partners__img" src="image/partners-6.png" alt="">
+        </div>
+
+        <div class="partners__sub">
+          <h3 class="partners__title">Subscribe For Latest Newsletter</h3>
+
+          <form action="#" class="partners__form">
+            <input class="partners__email" type="email" placeholder="Your Email">
+
+            <input class="partners__btn" type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+
+      <div class="partners__bottom"></div>
+    </section>
+  </main>
 </body>
+
 </html>

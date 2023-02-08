@@ -1,436 +1,411 @@
-html,
-body {
-  font-family: 'Montserrat', 'Times New Roman', sans-serif;
-  color: #252B42;
-  font-size: 14px;
-  font-weight: 500;
-  height: 100%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ======================================================================== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: lightgray;
+}
 
-.container {
-  /* Ширина для контента на странице */
-  max-width: 1046px;
+button {
+  border: none;
+  background: none;
+}
 
-  /* ┏ адаптив ┓ */
-  padding: 0 36px;
-  box-sizing: content-box;
-  /* ┗ адаптив ┛ */
+.wrapper {
+  max-width: 1110px;
+  padding: 0 32px;
 
-  /* Выстроит любой блочный блок по центру */
+  /* Выстраивает любой блочный элемент по центру горизонтали */
   margin: 0 auto;
 }
 
-/* ┏ для примера ┓ */
-.wrapper {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* min-height: 100%; */
+.section-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  color: #252B42;
+  text-align: center;
+  margin-bottom: 10px;
 }
-/* ┗ для примера ┛ */
 
-/* ======================================================================== */
+.section-desc {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
+  text-align: center;
+  margin-bottom: 50px;
+}
 
 .header {
   position: absolute;
   width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 3;
 }
 
-.header__container {
+.header__wrapper {
   display: flex;
   align-items: center;
   min-height: 104px;
 }
 
-/* ┏ адаптив ┓ */
-@media (max-width: 479px) {
-  .header__container {
-    min-height: 70px;
-  }
-}
-/* ┗ адаптив ┛ */
-
 .header__logo {
-  font-size: 24px;
   font-weight: 700;
-  color: inherit;
+  font-size: 24px;
+  line-height: 32px;
+  color: #252b42;
   text-decoration: none;
+  margin-right: 135px;
 }
 
-.header__menu {
-  margin-left: 133px;
-}
-
-/* ┏ адаптив ┓ */
-@media (max-width: 992px) {
-  .header__menu {
-    margin-left: 80px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header__menu {
-    margin-left: 50px;
-  }
-}
-
-@media (max-width: 425px) {
-  .header__menu {
-    margin-left: 20px;
-  }
-}
-/* ┗ адаптив ┛ */
-
-.menu__list {
-  display: flex;
-  padding: 0;
+.nav__list {
   margin: 0;
-
-  /* ┏ адаптив ┓ */
-  flex-wrap: wrap;
-  /* ┗ адаптив ┛ */
+  padding: 0;
+  list-style-type: none;
+  display: flex;
 }
 
-/* ┏ адаптив ┓ */
-@media (max-width: 320px) {
-  .menu__list {
-    flex-direction: column;
-  }
-}
-/* ┗ адаптив ┛ */
-
-.menu__item {
-  list-style: none;
-  padding: 8px 0;
+.nav__item {
+  margin-right: 20px;
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 21px;
-}
-
-.menu__link {
-  color: #737373;
-  line-height: 24px;
-  list-style: none;
+.nav__link {
   font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #737373;
   text-decoration: none;
 }
-
-/* ┏ адаптив ┓ */
-@media (max-width: 320px) {
-  .menu__link  {
-    font-size: 18px;
-  }
-}
-/* ┗ адаптив ┛ */
-
-/* ======================================================================== */
-
-/* ┏ для примера ┓ */
-.main {
-  /* flex: 1 0 auto; */
-  background-color: #FAFAFA;
-}
-/* ┗ для примера ┛ */
 
 .banner {
-  background-image: url(../img/banner.jpg); /* Местоположение фоновой картинки */
-  background-position: center center; /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
-  background-repeat: no-repeat; /* Фон не повторяется */
-
-  /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
-  /* background-attachment: fixed;  */
-
-  background-size: cover; /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
-  background-color: #464646; /* Цвет фона, который будет отображаться при загрузке фоновой картинки*/
-
-  /* Краткая запись */
-  /* background: url(../img/banner.png) center center cover no-repeat fixed; */
-
-  padding-top: 104px;
+  background-image: url("../image/banner-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ededed;
+  background: #ededed url("../image/banner-background.jpg") no-repeat center / cover;
+  padding: 184px 0 190px;
 }
 
-/* ┏ адаптив ┓ */
-@media (max-width: 768px) {
-  .banner  {
-    background-position: right; 
-  }
-}
-/* ┗ адаптив ┛ */
-
-.banner .banner-content {
-  padding: 80px 0 191px;
-  max-width: 509px; /* Позже изменить 509 на 400 */
+.banner__wrapper {
+  width: 50%;
 }
 
-/* ┏ адаптив ┓ */
-@media (max-width: 992px) {
-  .banner .banner-content  {
-    padding-top: 0;
-  }
-}
-/* ┗ адаптив ┛ */
-
-/* ┏ для примера ┓ */
-.banner-content > *:not(:last-child) {
-  /* margin-bottom: 35px; */
-}
-/* ┗ для примера ┛ */
-
-.banner .title {
-  margin: 0;
-  margin-bottom: 35px;
+.banner__title {
   font-weight: 800;
   font-size: 58px;
   line-height: 80px;
-  letter-spacing: 0.2px;
-  color: #252B42;
-}
-
-/* ┏ адаптив ┓ */
-@media (max-width: 992px) {
-  .banner .title  {
-    font-size: 42px;
-    line-height: 40px;
-  }
-}
-/* ┗ адаптив ┛ */
-
-.banner .subtitle {
-  margin: 0;
+  color: #252b42;
   margin-bottom: 35px;
+}
+
+.banner__subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  letter-spacing: 0.2px;
   color: #737373;
+  margin-bottom: 35px;
 }
 
-.banner .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-wrap: wrap;
-}
-
-.banner .buttons button {
+.banner__btn {
+  border-radius: 37px;
   padding: 10px 36px;
-  border: none;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 28px;
-  text-align: center;
-  color: inherit;
-  background-color: #FF7B47;
-  border-radius: 37px;
-  color: #FFFFFF;
-  cursor: pointer; /* отображаем курсор в виде руки при наведении */
 }
 
-.banner .buttons button:not(:last-child) {
+.banner__btn--orange {
+  background-color: #FF7B47;
+  color: #FFFFFF;
   margin-right: 10px;
 }
 
-/* ┏ адаптив ┓ */
-@media (max-width: 479px) {
-  .banner .buttons button  {
-    flex: 1 1 100%;
-    margin: 0;
-  }
-  
-  .banner .buttons button:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-/* ┗ адаптив ┛ */
-
-.banner .buttons .button-green {
-  background-color: transparent;
+.banner__btn--green {
   border: 1px solid #0D5C63;
+  background: transparent;
   color: #0D5C63;
 }
 
-/* ======================================================================== */
-
 .features {
-  margin-top: -111px;
+  display: flex;
+  position: relative;
+  top: -121px;
 }
 
-.features-wrapper {
+.features__card {
+  margin-right: 30px;
+  padding: 35px 40px;
+  width: 33%;
+  background-color: #FFFFFF;
+}
+
+.features__card--green {
+  margin-right: 0;
+  background-color: #0D5C63;
+  color: #FFFFFF;
+}
+
+.features__title {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #252B42;
+}
+
+.features__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
+}
+
+.features__card--green .features__text,
+.features__card--green .features__title {
+  color: #FFFFFF;
+}
+
+.achievements {
+  padding-bottom: 80px;
+}
+
+.achievements__items {
   display: flex;
   justify-content: space-between;
 }
 
-.features-item {
+.achievements__card {
   background-color: #ffffff;
-  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
-  padding: 35px 40px;
+  padding: 30px 40px;
+  margin-right: 30px;
+  text-align: center;
+
+  /* Может ли флекс элемент занимать свободное пространство (расширяться) */
+  flex-grow: 0;
+
+  /* Может ли флекс элемент сжиматься */
+  flex-shrink: 1;
+
+  /* Базовый размер флекс элемента */
+  flex-basis: 240px;
+
+  /* 0 - не разрешено
+     1 - разрешено
+  */
+
+  /* Сокращенное свойство от flex-grow, flex-shrink, flex-basis */
+  flex: 0 1 240px;
 }
 
-.features-item:not(:last-child) {
+/* Последней карточке убираем отступ */
+.achievements__card:last-child {
+  margin-right: 0;
+}
+
+/* Для всех карточек кроме последней */
+.achievements__card:not(:last-child) {
   margin-right: 30px;
 }
 
-.features-item > *:not(:last-child) {
+/* В блоке achievements__card выбирает все элементы кроме последнего */
+.achievements__card *:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.features-title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.1px;
-  color: #252B42;
+.achievements__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
-.features-description {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  color: #737373;
-}
-
-.features-green {
-  background-color: #0D5C63;
-}
-
-.features-green .features-title,
-.features-green .features-description {
-  color: #ffffff;
-}
-
-/* ======================================================================== */
-
-.section-title {
-  font-weight: bold;
+.achievements__title {
+  font-weight: 700;
   font-size: 40px;
   line-height: 57px;
-  text-align: center;
-  letter-spacing: 0.2px;
-  color: #252B42;
-  margin-bottom: 10px;
-}
-
-.section-description {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  letter-spacing: 0.2px;
-  color: #737373;
-}
-
-/* ======================================================================== */
-
-.achievements {
-  padding: 80px 0;
-}
-
-.achievements-wrapper {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.achievements-item {
-  padding: 30px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  flex: 0 1 240px;
-}
-
-.achievements-item > *:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.achievements-item:not(:last-child) {
-  margin-right: 40px;
-}
-
-.achievements-title {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 57px;
-  letter-spacing: 0.2px;
   color: #252B42;
 }
 
-.achievements-description {
-  font-weight: bold;
+.achievements__text {
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.1px;
   color: #737373;
 }
-
-/* ======================================================================== */
 
 .practice {
-  padding: 80px 0;
+  padding: 125px 0 80px;
 }
 
-.practice-wrapper {
+.practice__items {
   display: flex;
   justify-content: space-between;
-  margin-top: 45px;
 }
 
-.practice-item {
+.practice__card {
   background-color: #ffffff;
-  flex: 0 1 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 0 1 240px;
 }
 
-.practice-item:not(:last-child) {
-  margin-right: 35px;
+.practice__card:not(:last-child) {
+  margin-right: 30px;
 }
 
-.practice-item-container {
+.practice__wrapper {
   padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
 }
 
-.practice-title {
-  font-weight: bold;
+.practice__title {
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.1px;
   color: #252B42;
   margin-bottom: 15px;
 }
 
-.practice-description {
+.practice__text {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.2px;
   color: #737373;
 }
 
-.practice-picture {
-  width: 100%;
-  max-width: 240px;
+.about {
+  padding: 100px 0;
+  background-color: #ffffff;
 }
 
-/* ======================================================================== */
+.about .section-desc {
+  margin-bottom: 100px;
+}
 
-.footer {
-  height: 74px;
-  /* ┏ для примера ┓ */
-    /* flex: 0 0 auto; */
-  /* ┗ для примера ┛ */
+.about__wrapper {
+  display: flex;
+}
+
+.about__video {
+  width: 600px;
+  height: 442px;
+  margin-right: 120px;
+  object-fit: cover;
+}
+
+/* .about__img {
+  margin-right: 120px;
+} */
+
+.about__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  color: #252B42;
+  margin-bottom: 10px;
+}
+
+.about__desc {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
+  margin-bottom: 50px;
+}
+
+.about__item {
+  display: flex;
+}
+
+.about__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.about__icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+}
+
+.about__item-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #252B42;
+  margin-bottom: 5px;
+}
+
+.about__item-desc {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #737373;
+}
+
+.partners {
+  background-color: #fafafa;
+  position: relative;
+}
+
+.partners__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 87px;
+  padding: 50px 0;
+}
+
+.partners__img {
+  object-fit: contain;
+}
+
+.partners__bottom {
+  height: 77px;
+  background-color: #252B42;
+}
+
+.partners__sub {
+  background-color: #17213C;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+}
+
+.partners__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.partners__form {
+  border: 1px solid #E6E6E6;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 450px;
+}
+
+.partners__btn {
+  background-color: #FF7B47;
+  border: none;
+  border-left: 1px solid #E6E6E6;
+  padding: 15px 23px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.partners__email {
+  flex-grow: 1;
+  background-color: #F9F9F9;
+  padding: 15px 20px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
 }
