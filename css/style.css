@@ -294,7 +294,6 @@ button {
 
 .about__wrapper {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .about__video {
@@ -610,6 +609,16 @@ button {
   margin-left: 20px;
 }
 
+@media (max-width: 1024px) {
+  .about__wrapper {
+    flex-wrap: wrap;
+  }
+  
+  .about__video {
+    margin-bottom: 52px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     position: static;
@@ -679,10 +688,6 @@ button {
   .practice__items {
     justify-content: center;
     gap: 30px;
-  }
-
-  .about__video {
-    margin-bottom: 52px;
   }
 
   .partners .wrapper {
